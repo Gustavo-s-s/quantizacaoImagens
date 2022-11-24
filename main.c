@@ -27,6 +27,15 @@ int modo;
 // Protótipos
 void load(char *name, Image24 *pic);
 void process();
+double calcDistance(RGB8 color, RGB8 comparator);
+int findIndexOfLessDistance(Cell *source, int size, RGB8 target);
+int indexOfCell(Cell *source, int size, RGB8 target);
+Cell *filterByPopularity(Cell *source, int size, int quantidadeDeCores);
+Cell *groupBy(int quantyOfColors, RGB8 *colors, int size);
+void loadPall(Cell *colors, int size);
+void generateNewImage(Cell *cells, int quantidadeDeCores);
+void load(char *name, Image24 *pic);
+
 
 double calcDistance(RGB8 color, RGB8 comparator)
 {
